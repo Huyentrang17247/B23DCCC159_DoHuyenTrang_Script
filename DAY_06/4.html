@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_06-hàm</title>
+</head>
+<body>
+    <script>
+        var list_1 = [1,3,5,7,9];
+        var list_2 = [2,4,6,8,10];
+        //số lượng phần tử có trong mảng
+        document.write(list_1.length + "<br>");
+        //gộp tất cả các phần tử có trong mảng thành 1 chuỗi
+        document.write(list_2.join('-') + "<br>");
+        //ghép 2 mảng lại với nhau
+        document.write(list_1.concat(list_2) + "<br>");
+        //lấy ra 1 hoặc 1 số phần tử có trong mảng
+        document.write(list_1.slice(1,4) + "<br>");
+        //đảo ngược vị trí của các phần tử có trong mảng
+        document.write(list_2.reverse() + "<br>");
+        //sắp xếp lại mảng theo chiều tăng dần 
+        document.write(list_1.sort() +"<br>");
+        //thêm 1 hoặc nhiều phần tử vào cuối mảng
+        document.write(list_2.push(2,3) + "<br>");
+        //xoá phàn tử cuối cùng trong mảng
+        document.write(list_1.pop() + "<br>");
+        //thêm 1 hoặc nhiều phần tử vào đầu mảng
+        document.write(list_2.unshift(2,3) + '<br>');
+        //xoá phần tử đầu tiên trong mảng
+        document.write(list_1.shift() + '<br>')
+    </script>
+</body>
+</html>
