@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /**
+        Hãy tạo 1 mảng số nguyên ngẫu nhiên sau đó viết 2 hàm:
+
+        Hàm sắp xếp theo thứ tự tăng dần
+
+        Hàm loại bỏ các phần tử trùng nhau, sao cho mỗi phần tử chỉ xuất hiện 1 lần
+        */
+        //Hàm sắp xếp theo thứ tự tăng dần:
+        var mang = [13, 9, 26, 3, 22, 5, 2005, 13, 3];
+        mang.sort(function(a,b){return a-b});
+        console.log(mang);
+        //Hàm loại bỏ các phần tử trùng nhau, sao cho mỗi phần tử chỉ xuất hiện 1 lần\
+        var mang2 =Array.from(new Set(mang));
+        console.log(mang2);     
+    </script>
+</body>
+</html>

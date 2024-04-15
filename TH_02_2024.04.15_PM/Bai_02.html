@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /** 
+    Khởi tạo 1 mảng các số nguyên và viết các hàm sau:
+
+    Hàm tìm số nguyên lớn nhất trong mảng
+
+    Hàm tìm các số chính phương trong mảng
+
+    Hàm tìm các số lớn hơn trung bình cộng của mảng
+
+    Hàm tính trung bình cộng của các số không âm của mảng
+
+    */
+    //tìm số nguyên lớn nhất trong mảng
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -2, -10];
+    var maxInNumbers = Math.max.apply(Math, numbers);
+    console.log("Số nguyên lớn nhất trong mảng là :", maxInNumbers);
+
+    //tìm các số chính phương
+    function ktra(n){
+        if(n>2){
+            let i= Math.sqrt(n);
+            return Number.isInteger(i);
+        }else{
+            return false;
+        }
+    }
+    numbers.map(soChinhphuong =>{
+        if(ktra(soChinhphuong)){
+            console.log("Số chính phương là :", soChinhphuong);
+        };
+    });
+
+    //tìm số lớn hơn trung bình cộng của mảng
+    function soLonHonTrungBinhCong(n) {
+        var sum = n.reduce((a, b) => a+ b, 0);
+        var trungBinh = sum / n.length;
+        var soLonHonTB = n.filter(num => num > trungBinh);
+        return soLonHonTB;
+    }
+    var ketQua = soLonHonTrungBinhCong(numbers);
+    console.log("Số lớn hơn trung bình cộng của mảng là:", ketQua);
+
+    //tính trung bình cộng của các số không âm của mảng
+    function tbcSoKhongAm(arr){
+        if(arr.length == 0){
+            return false;
+        }else{
+            var sum = 0;
+            var count = 0;// đếm số lượng số không âm trong mảng
+            for(var i=0; i< arr.length; i++){
+                if(arr[i]>=0){
+                    sum+=arr[i];
+                    count++;
+                }
+            }
+            if(count==0){
+                return false;
+            }
+            var tbc = sum / count;
+            return tbc;
+        }
+    }
+    var kq = tbcSoKhongAm(numbers);
+    console.log("Trung bình cộng số không âm là :", kq)
+
+    </script>
+</body>
+</html>
