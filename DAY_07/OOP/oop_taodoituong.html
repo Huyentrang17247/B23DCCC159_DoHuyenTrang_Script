@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //cách toạ ra đối tượng
+        //cách 1:
+        student = {id:"B23DCCC159",name:"Huyền Trang",class:"CC03", birthday:2005}  
+        document.write(student.name +" - "+student.id+" - "+student.class+" - "+student.birthday +"<br>");  
+        //cách 2:
+        var sv = new Object();
+        sv.id ="B23DCCC159";
+        sv.name="Huyền Trang";
+        sv.class="CC03";
+        sv.birthday="13/09/2005";
+        document.write(sv.name +" - "+sv.id+" - "+sv.class+" - "+sv.birthday +"<br>");  
+        //cách 3:
+        function thong_tin(id, name, lop){
+            this.id=id;
+            this.name=name;
+            this.lop=lop;
+        }   
+        sinhvien=new thong_tin("B23DCCC159","Huyền Trang","CC03","2005");
+        document.write(sinhvien.name +" - "+sinhvien.id+" - "+sinhvien.lop +"<br>");  
+        //cách 4:
+        class Person{
+            name;
+            salary;
+            hello(){
+                document.write("Hello "+ this.name);
+            }
+            changeSalary(newSalary){
+                this.salary = newSalary;
+            }
+        }
+        a = new Person();
+        a.name = "Huyền Trang";
+        a.hello();
+        a.salary = 1;
+        document.write('<br>'+a.name + ': ' + a.salary);
+        a.changeSalary(12);
+        document.write('<br>'+a.name + ': ' + a.salary);
+    </script>
+
+
+
+</body>
+</html>

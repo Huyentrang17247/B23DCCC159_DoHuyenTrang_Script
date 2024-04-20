@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>Hello!!!</h1>
+    <p id="zent">Zent Coding School</p>
+    <select>
+        <option clas="car" value="Audi">Audi</option>
+        <option clas="car" value="Audi">Audi</option>
+        <option clas="car" value="Audi">Audi</option>
+        <option clas="car" value="Audi">Audi</option>
+    </select>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.</h2>
+    <h3>Khoa CNTT</h3>
+    <div>
+        <p id="hello">Chào mừng bạn đến với Zent Coding School</p>
+        <p id="zent">Zent Coding School</p>
+    </div>
+    <script>
+        var hello = document.getElementById('hello').innerText;
+		alert(hello);
+        document.getElementById('zent').style.color ="red";
+    </script>
+    <p id="test"> Click</p>
+    <p style="color:blue">Bạn có thể click vào button bên dưới và xem kết quả</p>
+    <button onclick="myFunction()">Click me</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+        var element = document.getElementById('test');
+        element.addEventListener('click', function() {
+            alert('Bạn vừa click');
+        });
+        function myFunction() {
+			document.getElementById('demo').innerHTML = "Zent Group";
+		};
+    </script>
+</body>
+</html>
