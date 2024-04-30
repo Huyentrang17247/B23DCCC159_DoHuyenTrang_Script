@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div style="text-align:center">
+        <input type="text" id="taskInput" value="Làm bài tập Jquery">
+        <button id="addTaskBtn">Thêm nhiệm vụ</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#addTaskBtn").click(function() {
+                var taskText = $("#taskInput").val().trim();
+                if (taskText !== "") {
+                    $("#taskList").append("<li>" + taskText + "</li>");
+                    $("#taskInput").val("");
+                } else {
+                    alert("Vui lòng nhập nhiệm vụ!");
+                }
+            });
+            $(document).on("click", "li", function() {
+                $(this).css("color", "red");
+            });
+        });
+    </script>
+
+    
+</body>
+</html>
