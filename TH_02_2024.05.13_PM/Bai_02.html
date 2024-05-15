@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai_02</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="list">
+        <h1>List Item</h1>
+        <input type="text" id="input" placeholder="New Item">
+        <button id="button">Add</button>
+        <ul id="item"></ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#button").click(function(){
+                var taskText=$("#input").val().trim();
+                if(taskText!==""){
+                    $("#item").append("<li>"+ taskText + "</li>");
+                    $("input").val("");
+                }else{
+                    alert("Vui lòng nhập Item !")
+                };
+            });
+        });
+    </script>
+</body>
+</html>
